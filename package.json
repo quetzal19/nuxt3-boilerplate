@@ -1,5 +1,5 @@
 {
-  "name": "dkc-kz-frontend",
+  "name": "nuxt3-boilerplate",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,8 +10,8 @@
     "postinstall": "nuxt prepare",
     "eslint": "eslint . --ext .vue,.js,.cjs,.ts --ignore-path .gitignore",
     "eslint:fix": "eslint . --ext .vue,.js,.cjs,.ts --fix --ignore-path .gitignore",
-    "stylelint": "stylelint **/*.{css,scss,vue}",
-    "stylelint:fix": "stylelint --fix **/*.{css,scss,vue}",
+    "stylelint": "stylelint 'src/**/*.{css,scss,vue}'",
+    "stylelint:fix": "stylelint --fix 'src/**/*.{css,scss,vue}'",
     "deploy": "pm2 deploy ecosystem.config.js production"
   },
   "engines": {
