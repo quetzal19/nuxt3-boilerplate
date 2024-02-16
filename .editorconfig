@@ -1,0 +1,18 @@
+# Файл EditorConfig верхнего уровня
+root = true
+
+[*.{js,ts,vue}]
+# применять "space"
+indent_style = space
+
+# количество отступов, используемых для каждого уровня отступа
+indent_size = 2
+
+# набор символов
+charset = utf-8
+
+# конце файла должна быть пустая строка
+insert_final_newline = true
+
+# удаляет любые пробельные символы, предшествующие символам новой строки
+trim_trailing_whitespace = true
