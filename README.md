@@ -1,4 +1,4 @@
-# DKC KZ Frontend
+# Nuxt 3 Boilerplate
 
 **Framework:** [Nuxt 3](https://nuxt.com/)
 
