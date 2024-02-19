@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'dkc-kz',
+      name: 'nuxt3',
       // port: '3000',
       exec_mode: 'cluster',
       instances: 'max',

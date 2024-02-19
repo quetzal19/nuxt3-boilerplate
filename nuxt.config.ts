@@ -24,7 +24,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'DKC KZ',
+      title: 'nuxt3-boilerplate',
       htmlAttrs: { lang: 'ru' },
       charset: 'utf-8',
       meta: [

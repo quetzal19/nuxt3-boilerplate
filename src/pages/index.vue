@@ -6,7 +6,7 @@ const localePath = useLocalePath();
 <template>
   <div>
     <h1 class="app-h1">
-      DKC KZ
+      Main
     </h1>
     <h2 class="app-h2">
       Тест шрифта
@@ -30,9 +30,6 @@ const localePath = useLocalePath();
     </NuxtLink>
     <NuxtLink :to="switchLocalePath('ru')">
       Руссккий
-    </NuxtLink>
-    <NuxtLink :to="switchLocalePath('kz')">
-      Казхсткий
     </NuxtLink>
     <div>Test 1 {{ $t('greetingTestCatalog.message') }}</div>
     <NuxtLink :to="localePath('home')">
