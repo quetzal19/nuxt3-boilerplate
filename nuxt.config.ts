@@ -3,10 +3,12 @@
 // import { fileURLToPath } from 'url';
 
 // Config modules
+import googleFontsConfig from './src/app/nuxt-config/google-fonts';
+import imagesConfig from './src/app/nuxt-config/image';
+import svgoConfig from './src/app/nuxt-config/svgo';
+import i18nConfig from './src/app/nuxt-config/i18n/i18n';
 import eslintConfig from './src/app/nuxt-config/eslint';
 import stylelintConfig from './src/app/nuxt-config/stylelint';
-import googleFontsConfig from './src/app/nuxt-config/google-fonts';
-import i18nConfig from './src/app/nuxt-config/i18n/i18n';
 
 export default defineNuxtConfig({
   devtools: { enabled: process.env.NODE_ENV !== 'production' },
@@ -35,7 +37,8 @@ export default defineNuxtConfig({
   modules: [
     ['@nuxtjs/google-fonts', googleFontsConfig],
     '@pinia/nuxt',
-    '@nuxt/image',
+    ['@nuxt/image', imagesConfig],
+    ['nuxt-svgo', svgoConfig],
     ['@nuxtjs/i18n', i18nConfig],
     ['@nuxtjs/eslint-module', eslintConfig],
     ['@nuxtjs/stylelint-module', stylelintConfig],

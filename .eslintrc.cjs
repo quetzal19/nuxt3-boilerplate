@@ -16,8 +16,8 @@ module.exports = {
     },
     {
       files: ['./src/pages/**.vue'],
-      rules: { 'vue/multi-word-component-names': 'off' }
-    }
+      rules: { 'vue/multi-word-component-names': 'off' },
+    },
   ],
   parser: 'vue-eslint-parser',
   parserOptions: {
@@ -40,6 +40,7 @@ module.exports = {
       peerDependencies: true,
     }],
     'import/prefer-default-export': 'off',
+    'import/no-unresolved': [2, { ignore: ['\\.img$', '\\.svg', '\\.png'] }],
     // TS
     '@typescript-eslint/comma-dangle': 'off',
     '@typescript-eslint/semi': 'off',
@@ -51,7 +52,7 @@ module.exports = {
       ignoreProperties: false,
     }],
     'vue/multi-word-component-names': ['error', {
-      ignores: ['default'],
+      ignores: ['index', 'default'],
     }],
     'vue/component-name-in-template-casing': ['error', 'PascalCase', {
       registeredComponentsOnly: true,
