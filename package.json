@@ -10,8 +10,8 @@
     "postinstall": "nuxt prepare",
     "eslint": "eslint . --ext .vue,.js,.cjs,.ts --ignore-path .gitignore",
     "eslint:fix": "eslint . --ext .vue,.js,.cjs,.ts --fix --ignore-path .gitignore",
-    "stylelint": "stylelint 'src/**/*.{css,scss,vue}'",
-    "stylelint:fix": "stylelint --fix 'src/**/*.{css,scss,vue}'",
+    "stylelint": "stylelint '**/*.{css,scss,vue}'",
+    "stylelint:fix": "stylelint --fix '**/*.{css,scss,vue}'",
     "deploy": "pm2 deploy ecosystem.config.js production"
   },
   "engines": {
@@ -27,6 +27,7 @@
     "@pinia/nuxt": "^0.5.1",
     "normalize.css": "^8.0.1",
     "nuxt": "^3.10.1",
+    "nuxt-swiper": "^1.2.2",
     "pinia": "^2.1.7",
     "pm2": "^5.3.1",
     "sass": "^1.70.0",
@@ -46,7 +47,9 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-nuxt": "^4.0.0",
     "nuxt-svgo": "^4.0.0",
+    "nuxt-viewport": "^2.1.4",
     "postcss": "^8.4.34",
     "postcss-html": "^1.6.0",
     "postcss-scss": "^4.0.9",

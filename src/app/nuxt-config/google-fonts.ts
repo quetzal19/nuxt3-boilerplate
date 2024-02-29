@@ -1,3 +1,4 @@
+// https://google-fonts.nuxtjs.org/getting-started/options
 export default {
   families: {
     Montserrat: [700],

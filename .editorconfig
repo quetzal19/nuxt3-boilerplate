@@ -1,7 +1,7 @@
 # Файл EditorConfig верхнего уровня
 root = true
 
-[*.{js,ts,vue}]
+[*.{js,ts,cjs,vue,css,scss}]
 # применять "space"
 indent_style = space
 

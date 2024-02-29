@@ -8,22 +8,19 @@ const localePath = useLocalePath();
     <h1 class="app-h1">
       Main
     </h1>
+    <MainSlider />
     <h2 class="app-h2">
       Тест шрифта
     </h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos in nihil nulla quae quaerat quos tempore veritatis
-      voluptate! Architecto, impedit quasi. Blanditiis cupiditate esse, iure officia perferendis qui quo velit!
-      Ab accusamus adipisci, aperiam architecto aspernatur debitis delectus, dolorem dolores eum expedita minima
-      molestiae nihil quia quis rem sapiente suscipit. Assumenda atque cum dignissimos et iure mollitia nemo
-      optio ullam?
+      When I come to this garden created by my ancestors, I remember: Like these flowers, we are all dying. To feel
+      life in every breath, in every cup of tea, in every life that we take away — this is the way of the Warrior;
+      this is bushido.
     </p>
     <p>
-      Повседневная практика показывает, что социально-экономическое развитие требует определения и уточнения
-      направлений прогрессивного развития. Задача организации, в особенности же новая модель
-      организационной деятельности требует от нас системного анализа модели развития. Задача организации, в особенности
-      же постоянный количественный рост и сфера нашей активности обеспечивает широкому
-      кругу специалистов участие в формировании модели развития.
+      Когда я прихожу в этот сад, созданный моими предками, я вспоминаю: как и эти цветки, все мы умираем. Чувствовать
+      жизнь в каждом вздохе, в каждой чашке чая, в каждой жизни, которую мы отнимаем — это и есть путь Воина;
+      это и есть — бусидо.
     </p>
     <NuxtLink :to="switchLocalePath('en')">
       English
@@ -35,11 +32,16 @@ const localePath = useLocalePath();
     <NuxtLink :to="localePath('home')">
       Homepage
     </NuxtLink>
+    <IGoogle class="icon" filled :font-controlled="false" />
   </div>
 </template>
 
 <style lang="scss">
 p {
   color: $red-1;
+}
+
+.icon {
+  max-width: 120px;
 }
 </style>

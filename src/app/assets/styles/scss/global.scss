@@ -16,11 +16,11 @@ html {
 }
 
 body {
-  min-width: 360px;
+  @include font-family(Roboto);
+  min-width: 475px;
   height: 100%;
   background-color: $white;
   color: $black;
-  font-family: Roboto, sans-serif;
   font-size: 13px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -38,6 +38,7 @@ ul {
 }
 
 a {
+  display: flex;
   text-decoration: none;
   transition: all 0.24s ease-in-out;
 }
@@ -65,6 +66,12 @@ button {
   outline: none;
 }
 
+.app-container {
+  width: 95%;
+  max-width: 1340px;
+  margin: 0 auto;
+}
+
 .visually-hidden {
   position: absolute;
   overflow: hidden;
@@ -76,4 +83,38 @@ button {
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
   white-space: nowrap;
+}
+
+.app-button {
+  padding: 10px 12px;
+  border-radius: 4px;
+  background-color: $red-1;
+  color: $white;
+  cursor: pointer;
+  transition: all 0.3s linear;
+
+  &:hover {
+    background-color: $red-2;
+  }
+}
+
+.app-link {
+  @include font-family(Montserrat);
+  display: flex;
+  color: $black;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  transition: all 0.3s linear;
+
+  &:hover {
+    color: $red-2;
+  }
+}
+
+.app-logo {
+  width: 100%;
+  height: auto;
+  color: $black;
 }

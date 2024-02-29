@@ -1,3 +1,4 @@
+// https://i18n.nuxtjs.org/docs/options
 // TODO подключить через langDir не получилось
 export default {
   vueI18n: 'src/app/nuxt-config/i18n/i18n.config.ts',
@@ -16,9 +17,9 @@ export default {
     },
   ],
   defaultLocale: 'ru',
-  strategy: 'prefix',
+  strategy: 'prefix_except_default',
   // lazy: true,
-  // langDir: 'shared/locales/',
+  // langDir: 'app/nuxt-config/i18n/locales',
   detectBrowserLanguage: {
     useCookie: true,
     alwaysRedirect: true,

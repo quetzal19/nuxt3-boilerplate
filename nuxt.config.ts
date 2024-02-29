@@ -1,14 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-// import path from 'path';
-// import { fileURLToPath } from 'url';
+import { fileURLToPath } from 'url';
 
 // Config modules
-import googleFontsConfig from './src/app/nuxt-config/google-fonts';
-import imagesConfig from './src/app/nuxt-config/image';
-import svgoConfig from './src/app/nuxt-config/svgo';
-import i18nConfig from './src/app/nuxt-config/i18n/i18n';
 import eslintConfig from './src/app/nuxt-config/eslint';
 import stylelintConfig from './src/app/nuxt-config/stylelint';
+import googleFontsConfig from './src/app/nuxt-config/google-fonts';
+import i18nConfig from './src/app/nuxt-config/i18n/i18n';
+import swiperConfig from './src/app/nuxt-config/swiper';
+import imagesConfig from './src/app/nuxt-config/image';
+import svgoConfig from './src/app/nuxt-config/svgo';
 
 export default defineNuxtConfig({
   devtools: { enabled: process.env.NODE_ENV !== 'production' },
@@ -21,9 +21,15 @@ export default defineNuxtConfig({
     plugins: 'app/plugins',
   },
   alias: {
-    // '@src': path.join(__dirname, './src'),
-    // src: fileURLToPath(new URL('./src', import.meta.url)),
+    content: fileURLToPath(new URL('src/shared/content/', import.meta.url)),
+    helpers: fileURLToPath(new URL('src/shared/helpers/', import.meta.url)),
   },
+  components: [
+    {
+      path: '~/shared/ui',
+      pathPrefix: false,
+    },
+  ],
   app: {
     head: {
       title: 'nuxt3-boilerplate',
@@ -42,6 +48,8 @@ export default defineNuxtConfig({
     ['@nuxtjs/i18n', i18nConfig],
     ['@nuxtjs/eslint-module', eslintConfig],
     ['@nuxtjs/stylelint-module', stylelintConfig],
+    'nuxt-viewport',
+    ['nuxt-swiper', swiperConfig],
   ],
   typescript: {
     typeCheck: true,

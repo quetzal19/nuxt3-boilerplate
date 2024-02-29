@@ -1,3 +1,4 @@
+// https://image.nuxt.com/get-started/configuration
 export default {
   quality: 80,
   format: ['webp'],
