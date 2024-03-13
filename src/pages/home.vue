@@ -6,7 +6,7 @@
     <h1 class="app-h1">
       Home
     </h1>
-    <div>Test 2 {{ $t('greeting.message') }}</div>
+    <div>Test 1 {{ $t('greeting.message') }}</div>
   </div>
 </template>
 

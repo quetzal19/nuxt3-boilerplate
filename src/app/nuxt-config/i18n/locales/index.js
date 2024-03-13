@@ -1,3 +1,4 @@
+// Альтернативный вариант подключения перевода
 import * as ruLocales from './ru/index';
 import * as enLocales from './en/index';
 

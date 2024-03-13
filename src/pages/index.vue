@@ -28,7 +28,7 @@ const localePath = useLocalePath();
     <NuxtLink :to="switchLocalePath('ru')">
       Руссккий
     </NuxtLink>
-    <div>Test 1 {{ $t('greetingTestCatalog.message') }}</div>
+    <div>Test 1 {{ $t('greeting.message') }}</div>
     <NuxtLink :to="localePath('home')">
       Homepage
     </NuxtLink>

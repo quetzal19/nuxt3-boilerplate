@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --host",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
@@ -48,6 +48,7 @@
     "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-vue": "^9.22.0",
     "nuxt-svgo": "^4.0.0",
     "nuxt-viewport": "^2.1.4",
     "postcss": "^8.4.34",

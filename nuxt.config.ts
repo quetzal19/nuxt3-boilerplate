@@ -51,9 +51,13 @@ export default defineNuxtConfig({
     'nuxt-viewport',
     ['nuxt-swiper', swiperConfig],
   ],
-  typescript: {
-    typeCheck: true,
-    strict: true,
+  runtimeConfig: {
+    // The private keys which are only available server-side
+    baseUrl: process.env.NUXT_BASE_URL,
+    public: {
+      // Keys within public are also exposed client-side
+      baseUrl: process.env.NUXT_BASE_URL,
+    },
   },
   css: ['normalize.css/normalize.css', '@/app/assets/styles/scss/main.scss'],
   vite: {

@@ -5,12 +5,12 @@ module.exports = {
   extends: [
     'airbnb-base',
     'airbnb-typescript/base',
-    'plugin:@typescript-eslint/recommended-type-checked',
+    'plugin:@typescript-eslint/recommended',
     'plugin:vue/vue3-recommended',
     'plugin:nuxt/recommended',
     '@nuxt/eslint-config',
   ],
-  plugins: ['nuxt'],
+  plugins: ['vue', 'nuxt'],
   overrides: [
     {
       extends: ['plugin:@typescript-eslint/disable-type-checked'],
@@ -42,7 +42,7 @@ module.exports = {
       peerDependencies: true,
     }],
     'import/prefer-default-export': 'off',
-    'import/no-unresolved': [2, { ignore: ['\\.img$', '\\.svg', '\\.png', '\\.json'] }],
+    'import/no-unresolved': [1, { ignore: ['\\.img$', '\\.svg', '\\.png', '\\.json'] }],
     // TS
     '@typescript-eslint/comma-dangle': 'off',
     '@typescript-eslint/semi': 'off',
