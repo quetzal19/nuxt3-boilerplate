@@ -10,7 +10,7 @@ module.exports = {
     'plugin:nuxt/recommended',
     '@nuxt/eslint-config',
   ],
-  plugins: ['vue', 'nuxt'],
+  plugins: ['import', 'vue', 'nuxt'],
   overrides: [
     {
       extends: ['plugin:@typescript-eslint/disable-type-checked'],
@@ -87,5 +87,15 @@ module.exports = {
     'quotes': ['error', 'single'],
     'semi': ['error', 'always'],
     'comma-dangle': ['error', 'always-multiline'],
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {},
+      alias: {
+        map: [
+          ['~', './src'],
+        ],
+      },
+    },
   },
 };
