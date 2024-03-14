@@ -4,7 +4,8 @@ module.exports = {
       name: 'nuxt3',
       // port: '3000',
       exec_mode: 'cluster',
-      instances: 'max',
+      // количество контейнеров
+      // instances: 'max',
       script: './.output/server/index.mjs',
     },
   ],
@@ -18,7 +19,7 @@ module.exports = {
       // ssh_options: ['ForwardAgent=yes'],
       // // Папка на сервере, в которую будет перенесено приложение
       // path: '/var/www/.output',
-      'post-deploy': 'npm install && npm run build && pm2 startOrRestart ecosystem.config.js --env production',
+      'post-deploy': 'npm install && npm run build --prod && pm2 startOrRestart ecosystem.config.cjs',
     },
   },
 };
