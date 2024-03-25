@@ -19,7 +19,6 @@ module.exports = {
       // ssh_options: ['ForwardAgent=yes'],
       // // Папка на сервере, в которую будет перенесено приложение
       // path: '/var/www/.output',
-      'post-deploy': 'npm install && npm run build --prod && pm2 startOrRestart ecosystem.config.cjs',
     },
   },
 };
