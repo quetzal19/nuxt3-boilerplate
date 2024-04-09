@@ -17,7 +17,7 @@ module.exports = {
       files: ['./**/*.js', '.eslintrc.{js,cjs}', '.stylelintrc.{js,cjs}'],
     },
     {
-      files: ['./src/pages/**/*.vue'],
+      files: ['./src/pages/**.vue'],
       rules: { 'vue/multi-word-component-names': 'off' },
     },
   ],
@@ -43,14 +43,10 @@ module.exports = {
     }],
     'import/prefer-default-export': 'off',
     'import/no-unresolved': [1, { ignore: ['\\.img$', '\\.svg', '\\.png', '\\.json'] }],
-    'no-shadow': 'off',
-    'no-console': ['warn', { allow: ['error'] }],
     // TS
     '@typescript-eslint/comma-dangle': 'off',
     '@typescript-eslint/semi': 'off',
-    '@typescript-eslint/no-shadow': 'off',
     // Vue
-    'vue/no-v-html': 'off',
     'vue/attributes-order': 'error',
     'vue/multiline-html-element-content-newline': ['error'],
     'vue/no-async-in-computed-properties': ['error'],
@@ -82,7 +78,7 @@ module.exports = {
     'vue/max-len': 'off',
     // Style
     'max-len': ['error', {
-      code: 160,
+      code: 120,
       ignoreComments: true,
       ignoreUrls: true,
     }],
@@ -96,9 +92,8 @@ module.exports = {
     'import/resolver': {
       typescript: {},
       alias: {
-        // взято из .nuxt/tsconfig.json
         map: [
-          ['~', '../src'],
+          ['~', './src'],
         ],
       },
     },

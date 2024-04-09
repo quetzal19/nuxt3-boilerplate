@@ -11,7 +11,7 @@ import imagesConfig from './src/app/nuxt-config/image';
 import svgoConfig from './src/app/nuxt-config/svgo';
 
 export default defineNuxtConfig({
-  devtools: { enabled: process.env.NODE_ENV === 'development' },
+  devtools: { enabled: process.env.NODE_ENV !== 'production' },
   srcDir: 'src/',
   dir: {
     public: 'app/public',
@@ -21,12 +21,8 @@ export default defineNuxtConfig({
     plugins: 'app/plugins',
   },
   alias: {
-    entities: fileURLToPath(new URL('src/entities/', import.meta.url)),
-    features: fileURLToPath(new URL('src/features/', import.meta.url)),
-    widgets: fileURLToPath(new URL('src/widgets/', import.meta.url)),
     content: fileURLToPath(new URL('src/shared/content/', import.meta.url)),
-    types: fileURLToPath(new URL('src/shared/types/', import.meta.url)),
-    assets: fileURLToPath(new URL('src/app/assets/', import.meta.url)),
+    helpers: fileURLToPath(new URL('src/shared/helpers/', import.meta.url)),
   },
   components: [
     {
@@ -41,9 +37,6 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      ],
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
       ],
     },
   },
