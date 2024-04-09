@@ -17,7 +17,7 @@ html {
 
 body {
   @include font-family(Roboto);
-  min-width: 475px;
+  min-width: 425px;
   height: 100%;
   background-color: $white;
   color: $black;
@@ -27,9 +27,12 @@ body {
   font-weight: 300;
   letter-spacing: 0;
   line-height: 21px;
-  overflow-x: hidden;
   scroll-behavior: smooth !important;
   text-size-adjust: 100%;
+
+  &.body-scroll-locks {
+    overflow: hidden;
+  }
 }
 
 ul {
@@ -40,7 +43,7 @@ ul {
 a {
   display: flex;
   text-decoration: none;
-  transition: all 0.24s ease-in-out;
+  transition: all .3s linear;
 }
 
 img {
@@ -66,12 +69,6 @@ button {
   outline: none;
 }
 
-.app-container {
-  width: 95%;
-  max-width: 1340px;
-  margin: 0 auto;
-}
-
 .visually-hidden {
   position: absolute;
   overflow: hidden;
@@ -85,7 +82,16 @@ button {
   white-space: nowrap;
 }
 
+.app-container {
+  width: 95%;
+  max-width: 1340px;
+  margin: 0 auto;
+}
+
 .app-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 12px;
   border-radius: 4px;
   background-color: $red-1;
@@ -109,6 +115,10 @@ button {
   transition: all 0.3s linear;
 
   &:hover {
+    color: $red-2;
+  }
+
+  &.router-link-active {
     color: $red-2;
   }
 }
