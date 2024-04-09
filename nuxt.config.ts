@@ -11,7 +11,9 @@ import imagesConfig from './src/app/nuxt-config/image';
 import svgoConfig from './src/app/nuxt-config/svgo';
 
 export default defineNuxtConfig({
-  devtools: { enabled: process.env.NODE_ENV !== 'production' },
+  devtools: {
+    enabled: true,
+  },
   srcDir: 'src/',
   dir: {
     public: 'app/public',
@@ -72,5 +74,19 @@ export default defineNuxtConfig({
         },
       },
     },
+  },
+
+  $production: {
+    devtools: {
+      enabled: false,
+    },
+    modules: [
+      ['@nuxtjs/eslint-module', {
+        failOnError: false,
+      }],
+      ['@nuxtjs/stylelint-module', {
+        failOnError: false,
+      }],
+    ],
   },
 });
