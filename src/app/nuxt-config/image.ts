@@ -1,7 +1,7 @@
 // https://image.nuxt.com/get-started/configuration
 export default {
   quality: 80,
-  format: ['webp'],
+  format: ['avif', 'webp'],
   provider: 'ipx',
   screens: {
     'xs': 425,
