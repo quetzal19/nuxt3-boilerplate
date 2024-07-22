@@ -13,6 +13,7 @@ import svgoConfig from './src/app/nuxt-config/svgo';
 export default defineNuxtConfig({
   devtools: { enabled: process.env.NODE_ENV !== 'production' },
   srcDir: 'src/',
+
   dir: {
     public: 'app/public',
     layouts: 'app/layouts',
@@ -20,16 +21,19 @@ export default defineNuxtConfig({
     middleware: 'app/middleware',
     plugins: 'app/plugins',
   },
+
   alias: {
     content: fileURLToPath(new URL('src/shared/content/', import.meta.url)),
     helpers: fileURLToPath(new URL('src/shared/helpers/', import.meta.url)),
   },
+
   components: [
     {
       path: '~/shared/ui',
       pathPrefix: false,
     },
   ],
+
   app: {
     head: {
       title: 'nuxt3-boilerplate',
@@ -40,17 +44,19 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   modules: [
     ['@nuxtjs/google-fonts', googleFontsConfig],
     '@pinia/nuxt',
     ['@nuxt/image', imagesConfig],
     ['nuxt-svgo', svgoConfig],
     ['@nuxtjs/i18n', i18nConfig],
-    ['@nuxtjs/eslint-module', eslintConfig],
+    ['@nuxt/eslint', eslintConfig],
     ['@nuxtjs/stylelint-module', stylelintConfig],
     'nuxt-viewport',
     ['nuxt-swiper', swiperConfig],
   ],
+
   runtimeConfig: {
     // The private keys which are only available server-side
     baseUrl: process.env.NUXT_BASE_URL,
@@ -59,7 +65,9 @@ export default defineNuxtConfig({
       baseUrl: process.env.NUXT_BASE_URL,
     },
   },
+
   css: ['normalize.css/normalize.css', '@/app/assets/styles/scss/main.scss'],
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -73,4 +81,6 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  compatibilityDate: '2024-07-22',
 });
