@@ -82,5 +82,19 @@ export default defineNuxtConfig({
     },
   },
 
+  $development: {
+    devtools: { enabled: true },
+    routeRules: {
+      '/api/**': { cors: true },
+    },
+  },
+  experimental: {
+    defaults: {
+      nuxtLink: {
+        trailingSlash: 'append',
+      },
+    },
+  },
+
   compatibilityDate: '2024-07-22',
 });
