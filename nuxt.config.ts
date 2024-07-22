@@ -51,7 +51,7 @@ export default defineNuxtConfig({
     ['@nuxt/image', imagesConfig],
     ['nuxt-svgo', svgoConfig],
     ['@nuxtjs/i18n', i18nConfig],
-    ['@nuxtjs/eslint-module', eslintConfig],
+    ['@nuxt/eslint', eslintConfig],
     ['@nuxtjs/stylelint-module', stylelintConfig],
     'nuxt-viewport',
     ['nuxt-swiper', swiperConfig],
