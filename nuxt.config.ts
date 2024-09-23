@@ -72,6 +72,9 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
+          // после обновления https://stackoverflow.com/questions/78997907/the-legacy-js-api-is-deprecated-and-will-be-removed-in-dart-sass-2-0-0
+          // postcss с версии 8.4.45 на 8.4.47
+          silenceDeprecations: ['legacy-js-api'],
           additionalData: `
             @use "@/app/assets/google-fonts/css/nuxt-google-fonts.css" as *;
             @use "@/app/assets/styles/scss/_colors.scss" as *;
